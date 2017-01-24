@@ -22,6 +22,10 @@
 </header>
 
 <body>
+	<div class="login-cover">
+		<!-- MDL Spinner Component -->
+		<div class=" page-loader mdl-spinner mdl-js-spinner is-active"></div>
+	</div>
 	<div class="mdl-layout mdl-js-layout">
 	  <header class="mdl-layout__header">
 	    <div class="mdl-layout-icon"></div>
@@ -30,18 +34,22 @@
 		      <span class="page-title-span"> | </span>
 		      <span class="page-title-span"> Home</span>
 	      </span>
-	      <div class="mdl-layout-spacer"></div>
-	      <div class="container">
-			<input id="txtEmail" type="email" placeholder="Email">
-			<input id="txtPassword" type="password" placeholder="Password">	
-			<button id="btnLogin" class="">Login</button>
-			<button id="btnSignUp" class="">Sign Up</button>
-			<button id="btnLogout" class="">Log out</button>
-		  </div>
+	      <div class="mdl-layout-spacer"></div>	      
 	      <nav class="mdl-navigation">
-	        <a class="mdl-navigation__link" href="#">Nav link 1</a>
-	        <a class="mdl-navigation__link" href="#">Nav link 2</a>
-	        <a class="mdl-navigation__link" href="#">Nav link 3</a>
+	        <div class="container">
+			<input id="txtEmail" type="email" placeholder="Email">
+			<input id="txtPassword" type="password" placeholder="Password">
+			<!-- Colored raised button -->
+			<button id="btnLogin" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				Login
+			</button>
+			<button id="btnSignUp" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				Sign Up
+			</button>
+			<button id="btnLogout" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				Log out <i class="button-right-icon material-icons">account_circle</i>
+			</button>			
+		  </div>
 	      </nav>
 	    </div>
 	  </header>
