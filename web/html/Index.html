@@ -2,25 +2,52 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>ITAM Web</title>
-	<href="http://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+	<title>ITAM Web</title>	
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!--Firebase-->
 	<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+	<!--jQuery-->
 	<script type="text/javascript" src="../javascript/js/jquery-3.1.1.min.js"></script>
+	
+	<!--Material design-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-indigo.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 </head>
 <header>
-	<div class="container">
-		<input id="txtEmail" type="email" placeholder="Email">
-		<input id="txtPassword" type="password" placeholder="Password">	
-		<button id="btnLogin" class="btn btn-action">Login</button>
-		<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
-		<button id="btnLogout" class="btn btn-action hide">Log out</button>
-	</div>
+
+	
 	
 </header>
 
 <body>
-	
+	<div class="mdl-layout mdl-js-layout">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout-icon"></div>
+	    <div class="mdl-layout__header-row">
+	      <span class="mdl-layout__title">WebItamLaboratory
+		      <span class="page-title-span"> | </span>
+		      <span class="page-title-span"> Home</span>
+	      </span>
+	      <div class="mdl-layout-spacer"></div>
+	      <div class="container">
+			<input id="txtEmail" type="email" placeholder="Email">
+			<input id="txtPassword" type="password" placeholder="Password">	
+			<button id="btnLogin" class="">Login</button>
+			<button id="btnSignUp" class="">Sign Up</button>
+			<button id="btnLogout" class="">Log out</button>
+		  </div>
+	      <nav class="mdl-navigation">
+	        <a class="mdl-navigation__link" href="#">Nav link 1</a>
+	        <a class="mdl-navigation__link" href="#">Nav link 2</a>
+	        <a class="mdl-navigation__link" href="#">Nav link 3</a>
+	      </nav>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	  </div>
+	</div>	
 </body>
 
 <script src="../javascript/app.js"></script>
