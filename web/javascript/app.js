@@ -27,6 +27,18 @@
 
 }());
 
+//Comprobar si esta conectado
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    $(".login-cover").hide();
+  } else {
+    // No user is signed in.
+    alert("Youuuuuuuuuuuuuu");
+  }
+});
+
 //Signup event
 btnSignUp.addEventListener('click', e => {
 	//Get email and password
