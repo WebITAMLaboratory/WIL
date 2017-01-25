@@ -27,6 +27,7 @@
 
 }());
 
+//AQUI COMIENZA UNA PARTE DIFERENTE
 //Comprobar si esta conectado
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -35,10 +36,28 @@ firebase.auth().onAuthStateChanged(function(user) {
     $(".login-cover").hide();
   } else {
     // No user is signed in.
-    alert("Youuuuuuuuuuuuuu");
+     var dialog = document.querySelector('#loginDialog');
+     if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    dialog.showModal();    
   }
 });
 
+$("#loginBtn").click(
+    function(){
+      var email = $("#loginEmail").val();
+      var password= $("#loginPassword").val();
+      if (email != " " && password != " ") {
+        $("loginProgress").show();
+        $("loginBtn").hide();
+      }
+    }
+
+  )
+
+
+//PARTE ANTIGUA
 //Signup event
 btnSignUp.addEventListener('click', e => {
 	//Get email and password

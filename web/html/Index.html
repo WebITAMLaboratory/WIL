@@ -15,47 +15,68 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 </head>
-<header>
 
-	
-	
-</header>
 
 <body>
+	<!--LOGIN DIALOG-->
+	<dialog id="loginDialog" class="mdl-dialog">
+		<h4 class="mdl-dialog__title">Sign In</h4>
+		<div class="mdl-dialog__content">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input id="loginEmail" class="mdl-textfield__input" type="text" id="sample3">
+			    <label class="mdl-textfield__label" for="sample3">Email ...</label>
+			 </div>
+			 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input id="loginPassword" class="mdl-textfield__input" type="text" id="sample3">
+			    <label class="mdl-textfield__label" for="sample3">Password ...</label>
+			 </div>
+		</div>
+		<div class="mdl-dialog__actions">
+			<!-- Colored raised button -->
+			<button id="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-js-ripple-effect">
+			  Sign In
+			</button>
+			<!-- MDL Spinner Component -->
+			<div id="loginProgress" class="mdl-spinner mdl-js-spinner is-active"></div>
+			
+		</div>
+	</dialog>
+
+
 	<div class="login-cover">
 		<!-- MDL Spinner Component -->
 		<div class=" page-loader mdl-spinner mdl-js-spinner is-active"></div>
 	</div>
 	<div class="mdl-layout mdl-js-layout">
-	  <header class="mdl-layout__header">
-	    <div class="mdl-layout-icon"></div>
-	    <div class="mdl-layout__header-row">
-	      <span class="mdl-layout__title">WebItamLaboratory
-		      <span class="page-title-span"> | </span>
-		      <span class="page-title-span"> Home</span>
-	      </span>
-	      <div class="mdl-layout-spacer"></div>	      
-	      <nav class="mdl-navigation">
-	        <div class="container">
-			<input id="txtEmail" type="email" placeholder="Email">
-			<input id="txtPassword" type="password" placeholder="Password">
-			<!-- Colored raised button -->
-			<button id="btnLogin" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-				Login
-			</button>
-			<button id="btnSignUp" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-				Sign Up
-			</button>
-			<button id="btnLogout" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-				Log out <i class="button-right-icon material-icons">account_circle</i>
-			</button>			
-		  </div>
-	      </nav>
-	    </div>
-	  </header>
-	  <div class="mdl-layout__drawer">
-	  </div>
-	</div>	
+		<header class="mdl-layout__header">
+			<div class="mdl-layout-icon"></div>
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout__title">WebItamLaboratory
+					<span class="page-title-span"> | </span>
+					<span class="page-title-span"> Home</span>
+				</span>
+				<div class="mdl-layout-spacer"></div>	      
+				<nav class="mdl-navigation">
+					<div class="container">
+						
+						<!-- Colored raised button -->
+						<button id="btnLogin" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							Login
+						</button>
+						<button id="btnSignUp" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							Sign Up
+						</button>
+						<button id="btnLogout" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							Log out <i class="button-right-icon material-icons">account_circle</i>
+						</button>			
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="mdl-layout__drawer">
+	</div>
+</div>	
 </body>
 
 <script src="../javascript/app.js"></script>
