@@ -36,14 +36,65 @@
         <div class="mdl-layout-spacer"></div>        
         <!-- Navigation -->
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">
+            <!-- Raised button -->
+            <button class="mdl-button mdl-js-button mdl-button--raised">
+              Sign up <i class="material-icons">add_circle_outline</i>
+            </button>
+          </a>
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
         </nav>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="page-content"><!-- Your content goes here --></div>
+      <div class="page-content">
+
+        <!-- Your content goes here -->
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col"></div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col">
+            <!-- Wide card with share menu button -->
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Welcome</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                  <input id="loginPassword" class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Name ...</label>              
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input id="loginEmail" class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Email ...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input id="loginPassword" class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Password ...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input id="loginPassword" class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Confirm Password ...</label>
+                </div>
+              </div>                    
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                  <a class="mdl-navigation__link" href="">Get Started</a>
+                </a>
+                <!-- MDL Progress Bar with Indeterminate Progress -->
+                <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+              </div>
+              <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                  <i class="material-icons">share</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
     </main>
   </div>
 </body>
