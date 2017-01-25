@@ -7,35 +7,29 @@
     storageBucket: "itamlabweb.appspot.com",
     messagingSenderId: "345250983225"
   };
+
   firebase.initializeApp(config);
-
-  const txtEmail = document.getElementById('txtEmail');
-  const txtPassword = document.getElementById('txtPassword');
-  const btnLogin = document.getElementById('btnLogin');
-  const btnSignUp = document.getElementById('btnSignUp');
-  const btnLogout = document.getElementById('btnLogout');
-
-  btnLogin.addEventListener('click', e=> {
-  	//Get email and password
-  	const email = txtEmail.value;
-  	const pass = txtPassword.value;
-  	const auth = firebase.auth();
-  	//Sign in
-  	const promise =auth.signInWithEmailAndPassword(email, pass);
-  	promise.catch(e => console.log(e.message));
-  })
 
 }());
 
-//AQUI COMIENZA UNA PARTE DIFERENTE
 //Comprobar si esta conectado
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     $(".login-cover").hide();
+
+    var dialog = document.querySelector('#loginDialog');
+     if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    dialog.close(); 
+
   } else {
     // No user is signed in.
+
+    $(".login-cover").show();
+
      var dialog = document.querySelector('#loginDialog');
      if (! dialog.showModal) {
       dialogPolyfill.registerDialog(dialog);
@@ -44,42 +38,37 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+/*LOGIN PROCESS*/
+
 $("#loginBtn").click(
     function(){
       var email = $("#loginEmail").val();
       var password= $("#loginPassword").val();
-      if (email != " " && password != " ") {
-        $("loginProgress").show();
-        $("loginBtn").hide();
+      if (email != "" && password != "") {
+        $("#loginProgress").show();
+        $("#loginBtn").hide();
+
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error){
+          $("#loginError").show().text(error.message);
+          $("#loginProgress").hide();
+          $("#loginBtn").show();
+        });
+
       }
     }
 
   )
 
+/*lOG OUT PROCESS*/
 
-//PARTE ANTIGUA
-//Signup event
-btnSignUp.addEventListener('click', e => {
-	//Get email and password
-	//TODO: CHECK 4 REAL EMAILZ
-  	const email = txtEmail.value;
-  	const pass = txtPassword.value;
-  	const auth = firebase.auth();
-  	//Sign in
-  	const promise =auth.createUserWithEmailAndPassword(email, pass);
-  	promise.catch(e => console.log(e.message));
-})
+$("#signOutBtn").click(
+    function(){
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
 
-	btnLogout.addEventListener('click', e=>{
-		firebase.auth().signOut();
-	})
-
-//realtime Listener
-firebase.auth().onAuthStateChanged(firebaseUser => {
-	if (firebaseUser) {
-		console.log(firebaseUser);
-		btnLogout.classList.remove('hide');
-	}else
-	console.log('not log in')
-	btnLogout.classList.add('hide');
-});
+      }, function(error) {
+        // An error happened.
+        alert(error.message);
+      });
+    }
+  )
