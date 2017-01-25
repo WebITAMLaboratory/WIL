@@ -34,7 +34,9 @@ firebase.auth().onAuthStateChanged(function(user) {
      if (! dialog.showModal) {
       dialogPolyfill.registerDialog(dialog);
     }
-    dialog.showModal();    
+    dialog.showModal();
+    $("#loginProgress").hide();
+    $("#loginBtn").show();    
   }
 });
 
