@@ -43,6 +43,18 @@
   color: #fff;
 }
 
+.demo2-card-wide.mdl-card {
+  width: 512px;
+}
+.demo2-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../img/project.jpg') center / cover;
+}
+.demo2-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
 body{
 	background: #efefef;
 }
