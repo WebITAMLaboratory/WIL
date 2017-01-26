@@ -34,5 +34,15 @@
   	ulList.appendChild(li);
   });
 
+  dbRefList.on('child_changed', snap => {
+  	const liChanged = document.getElementById(snap.key);
+  	liChanged.innerText = snap.val();
+  });
+
+  dbRefList.on('child_removed', snap => {
+  	const liToRemove = document.getElementById(snap.key);
+  	liToRemove.remove();
+  });
+
 }());
 
