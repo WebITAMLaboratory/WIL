@@ -31,7 +31,7 @@
      const Cel = txtCel.value;
      const EmailConfirm = txtEmailConfirm.value;
      const PasswordConfirm = txtPasswordConfirm.value;
-     if (true) {
+     if (Name != "" && Cel != "" && email == EmailConfirm && pass == PasswordConfirm) {
        if (email != "" && pass != "") {
           $("#p2").show();
           $("#btnSignUp").hide();
