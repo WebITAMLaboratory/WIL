@@ -54,9 +54,19 @@
      }else{
        alert("Mising Fields");
      }
-     var  firebaseRef = firebase.database().ref('users'+ 'usuarioTest');
+
+     function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+    return result;}
+
+
+     var user = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+     var  firebaseRef = firebase.database().ref(user);
      firebaseRef.child("Name").set(Name);
-     alert(Name);
+     firebaseRef.child("Cel").set(Cel);
+     firebaseRef.child("EmailConfirm").set(EmailConfirm);
+     firebaseRef.child("PasswordConfirm").set(PasswordConfirm);
 
     }else{
        alert("Mising Fields");
