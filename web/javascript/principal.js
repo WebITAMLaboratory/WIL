@@ -32,7 +32,7 @@
      const EmailConfirm = txtEmailConfirm.value;
      const PasswordConfirm = txtPasswordConfirm.value;
      if (Name != "" && Cel != "" && email == EmailConfirm && pass == PasswordConfirm) {
-       if (email != "" && pass != "") {
+       if (email != "" && pass != "" && /@itam.mx\s*$/.test(email)) {
           $("#p2").show();
           $("#btnSignUp").hide();
        //Sign in
@@ -50,12 +50,9 @@
           $("#p2").hide();
         }
           // ...
-      });   
-     }else{
-       alert("Mising Fields");
-     }
+      });
 
-     function randomString(length, chars) {
+       function randomString(length, chars) {
     var result = '';
     for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
     return result;}
@@ -67,12 +64,18 @@
      firebaseRef.child("Cel").set(Cel);
      firebaseRef.child("EmailConfirm").set(EmailConfirm);
      firebaseRef.child("PasswordConfirm").set(PasswordConfirm);
+     window.location.href = 'index.html';
 
-    }else{
+     }else{
+      if (/@itam.mx\s*$/.test(email) == false) {
+        alert("Only @itam.mx domains");
+      }else{
        alert("Mising Fields");
+      }
      }
-    
-
+    }else{
+       alert("Mising Fields or email/password error");
+     }
  });
 
 
