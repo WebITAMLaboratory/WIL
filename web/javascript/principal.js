@@ -26,10 +26,21 @@
      const email = txtEmail.value;
      const pass = txtPassword.value;
      const auth = firebase.auth();
+     if (email != "" && pass != "") {
+        $("#p2").show();
+        $("#btnSignUp").hide();
      //Sign in
      const promise =auth.createUserWithEmailAndPassword(email, pass);
-     promise.catch(e => console.log(e.message));
-           
+     if (promise.catch(e => console.log(e.message)) != "") {
+      window.location.href = 'index.html';
+     }
+     else{
+      $("#p2").show();
+        $("#btnSignUp").show();
+     }
+   }else{
+     alert("Error");
+   }
  });
 
 
