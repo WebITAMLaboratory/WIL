@@ -26,28 +26,43 @@
      const email = txtEmail.value;
      const pass = txtPassword.value;
      const auth = firebase.auth();
-     if (email != "" && pass != "") {
-        $("#p2").show();
-        $("#btnSignUp").hide();
-     //Sign in
-     const promise =auth.createUserWithEmailAndPassword(email, pass);
-     promise.catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+     
+     const Name = txtName.value;
+     const Cel = txtCel.value;
+     const EmailConfirm = txtEmailConfirm.value;
+     const PasswordConfirm = txtPasswordConfirm.value;
+     if (true) {
+       if (email != "" && pass != "") {
+          $("#p2").show();
+          $("#btnSignUp").hide();
+       //Sign in
+       const promise =auth.createUserWithEmailAndPassword(email, pass);
+       promise.catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-      if (errorMessage == "The email address is already in use by another account.") {
-        window.location.href = 'index.html';
-      }else{
-        alert(errorMessage);
-        $("#btnSignUp").show();
-        $("#p2").hide();
-      }
-        // ...
-    });   
-   }else{
-     alert("Error");
-   }
+        if (errorMessage == "The email address is already in use by another account.") {
+          window.location.href = 'index.html';
+        }else{
+          alert(errorMessage);
+          $("#btnSignUp").show();
+          $("#p2").hide();
+        }
+          // ...
+      });   
+     }else{
+       alert("Mising Fields");
+     }
+     var  firebaseRef = firebase.database().ref('users'+ 'usuarioTest');
+     firebaseRef.child("Name").set(Name);
+     alert(Name);
+
+    }else{
+       alert("Mising Fields");
+     }
+    
+
  });
 
 
