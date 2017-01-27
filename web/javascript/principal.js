@@ -31,13 +31,20 @@
         $("#btnSignUp").hide();
      //Sign in
      const promise =auth.createUserWithEmailAndPassword(email, pass);
-     if (promise.catch(e => console.log(e.message)) != "") {
-      window.location.href = 'index.html';
-     }
-     else{
-      $("#p2").show();
+     promise.catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      if (errorMessage == "The email address is already in use by another account.") {
+        window.location.href = 'index.html';
+      }else{
+        alert(errorMessage);
         $("#btnSignUp").show();
-     }
+        $("#p2").hide();
+      }
+        // ...
+    });   
    }else{
      alert("Error");
    }
