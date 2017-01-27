@@ -10,6 +10,28 @@
 
   firebase.initializeApp(config);
 
+  //Get elements
+  const txtName = document.getElementById('txtName');
+  const txtCel = document.getElementById('txtCel');
+  const txtEmail = document.getElementById('txtEmail')
+  const txtEmailConfirm = document.getElementById('txtEmailConfirm');
+  const txtPassword = document.getElementById('txtPassword');
+  const txtPasswordConfirm = document.getElementById('txtPasswordConfirm');
+  const btnSignUp = document.getElementById('btnSignUp');
+
+  //SIGN UP EVENT
+ btnSignUp.addEventListener('click', e => {
+   //Get email and password
+   //TODO: CHECK 4 REAL EMAILZ
+     const email = txtEmail.value;
+     const pass = txtPassword.value;
+     const auth = firebase.auth();
+     //Sign in
+     const promise =auth.createUserWithEmailAndPassword(email, pass);
+     promise.catch(e => console.log(e.message));
+           
+ });
+
 
   //GET elemnt
   //PARENT VALUE

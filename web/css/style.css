@@ -26,6 +26,9 @@
 #loginProgress{
 	display: none;
 }
+#p2{
+	display: none;
+}
 
 #loginError{
 	display: none;
