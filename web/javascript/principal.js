@@ -19,10 +19,10 @@
 
   // Create references
   	//ref nos lleva a la raiz de la base y el child crea una clave hija objecto
-  const dbRefObject = firebase.database().ref().child('object');
-  const dbRefList = dbRefObject.child('hobbies');
+  const dbRefObject = firebase.database().ref().child('object');//.child(nombre) se refiere nombre de la rama en la base de datos
+  const dbRefList = dbRefObject.child('hobbies'); //child camina en la ruta de db
   //Sync object changes 
-  dbRefObject.on('value', snap => {
+  dbRefObject.on('value', snap => { //.on =manejador de evento
   	preObject.innerText = JSON.stringify(snap.val(),null, 3);
   });
 

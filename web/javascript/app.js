@@ -61,6 +61,15 @@ $("#loginBtn").click(
 
   )
 
+//TOKEN POROCES 
+
+firebase.auth().signInWithCustomToken(token).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
 /*lOG OUT PROCESS*/
 
 $("#signOutBtn").click(
