@@ -64,7 +64,7 @@
      firebaseRef.child("Cel").set(Cel);
      firebaseRef.child("EmailConfirm").set(EmailConfirm);
      firebaseRef.child("PasswordConfirm").set(PasswordConfirm);
-     window.location.href = 'index.html';
+     alert("Sign up successful");
 
      }else{
       if (/@itam.mx\s*$/.test(email) == false) {
