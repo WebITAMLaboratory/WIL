@@ -58,8 +58,10 @@
     return result;}
 
 
-     var user = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-     var  firebaseRef = firebase.database().ref(user);
+     var user = "USER: ";
+     var id = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+     var code = user.concat(id);
+     var  firebaseRef = firebase.database().ref(code);
      firebaseRef.child("Name").set(Name);
      firebaseRef.child("Cel").set(Cel);
      firebaseRef.child("EmailConfirm").set(EmailConfirm);

@@ -73,11 +73,11 @@
           <div class="mdl-cell mdl-cell--4-col">
             <!-- VALUE  -->
             <pre id="object">
-              
+
             </pre>
             <!-- CHILD  -->
             <ul id="list">
-              
+
             </ul>
             <!--END CHILD-->
           </div>
@@ -90,29 +90,35 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
-                  <input id="" class="mdl-textfield__input" type="text">
+                  <input id="txtCompanName" class="mdl-textfield__input" type="text">
                   <label class="mdl-textfield__label" for="sample3">Name ...</label>              
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input id="" class="mdl-textfield__input" type="text" ">
+                  <input id="txtCompanEmail" class="mdl-textfield__input" type="text" ">
                   <label class="mdl-textfield__label" for="sample3">Email ...</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input id="" class="mdl-textfield__input" type="text" ">                  
-                  <label class="mdl-textfield__label" for="sample3">Reprecentacion o independente...</label>
-                </div>               
+                  <input id="txtRepre" class="mdl-textfield__input" type="text" ">                  
+                  <label class="mdl-textfield__label" for="sample3">Representacion o independente...</label>
+                </div>      
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input id="txtNomProy" class="mdl-textfield__input" type="text" ">                  
+                  <label class="mdl-textfield__label" for="sample3">Nombre del proyecto...</label>
+                </div>         
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <progress value="0" max="100" id="uploader">0%</progress>
                   <input id="fileButton" class="mdl-textfield__input" type="file" value="upload" >                  
                 </div>                
               </div>                    
-              <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Get Started
-        </a>
-      </div>
-      <!-- MDL Progress Bar with Indeterminate Progress -->
-                <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+              <div class="mdl-card__actions mdl-card--border" id="btnPush">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btnPush">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btnPush">
+                    Push your project
+                </button>
+                </a>
+              </div>
+              <!-- MDL Progress Bar with Indeterminate Progress -->
+              <div id="p3" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
               <div class="mdl-card__menu">
                 <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
                   <i class="material-icons">share</i>
@@ -122,13 +128,12 @@
           </div>
           <!--BLOck-->
           <div class="mdl-cell mdl-cell--4-col">
-           
+
           </div> 
         </div> 
       </div>
     </main>
   </div>
-  <script src="../javascript/principal.js"></script>
   <script src="../javascript/proposal.js"></script>
 </body>
 </html>
