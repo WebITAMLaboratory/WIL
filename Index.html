@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITAM Web</title> 
-  <link rel="stylesheet" type="text/css" href="WIL/web/css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <!--Firebase-->
   <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
   <!--jQuery-->
@@ -16,37 +17,23 @@
 <body>
 <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <div class="mdl-layout__header-row">        
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="WIL/web/html/index.html">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="html/principal.html">
             <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--raised mdl-js-ripple-effect">
-              Log In <i class="button-right-icon material-icons">person</i>
-            </button>
-          </a>
-        </nav>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Title -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="WIL/web/html/principal.html">
-            <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--raised mdl-js-ripple-effect">
-              <span class="mdl-layout__title">Web Itam Laboratory
-                <span class="page-title-span"> | </span>
-                <span class="page-title-span"> Home</span>
+              <span class="mdl-layout__title">
+                <span class="page-title-span">Home</span>
                 <i class="material-icons">account_balance</i>
               </span>  
             </button>
           </a>
         </nav>
-
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>        
         <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="WIL/web/html/proposal.html">
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="html/proposal.html">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
               Proposal <i class="material-icons">description</i>
             </button>
@@ -58,34 +45,71 @@
           </a>
           <a class="mdl-navigation__link" href="">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-              Contributions Wall <i class="material-icons">people</i>
+              Contributions<i class="material-icons">people</i>
+            </button>
+          </a>
+        </nav>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="html/index.html">
+            <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--raised mdl-js-ripple-effect">
+              Log In <i class="button-right-icon material-icons">person</i>
             </button>
           </a>
         </nav>
       </div>
     </header>
+    <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+      <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="html/principal.html">
+            <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--raised mdl-js-ripple-effect">
+              <span class="mdl-layout__title">
+                <span class="page-title-span">Home</span>
+                <i class="material-icons">account_balance</i>
+              </span>  
+            </button>
+          </a>
+        </nav>      <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="html/proposal.html">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Proposal <i class="material-icons">description</i>
+            </button>
+          </a>
+          <a class="mdl-navigation__link" href="">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Documentation <i class="material-icons">library_books</i>
+            </button>
+          </a>
+          <a class="mdl-navigation__link" href="">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+              Contributions<i class="material-icons">people</i>
+            </button>
+          </a>
+        </nav>
+    </div>
+    
     <main class="mdl-layout__content">
       <div class="page-content">
-
         <!-- Your content goes here -->
         <div class="mdl-grid">
           <!--BLOck-->
-          <div class="mdl-cell mdl-cell--4-col">
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-cell--order-2-phone IZQ">
             <!-- VALUE  -->
             <pre id="object">
-
             </pre>
             <!-- CHILD  -->
             <ul id="list">
-
             </ul>
             <!--END CHILD-->
           </div>      
-          <div class="mdl-cell mdl-cell--4-col">
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--6-col-phone mdl-cell--order-1-phone">
             <!-- Wide card with share menu button -->
             <div class="demo-card-wide mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Welcome</h2>
+                <h2 class="mdl-card__title-text card-text-green">Welcome</h2>
               </div>
               <div class="mdl-card__supporting-text">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
@@ -130,13 +154,13 @@
             </div>
           </div>
           <!--BLOck-->
-          <div class="mdl-cell mdl-cell--4-col">
+          <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--10-col-tablet mdl-cell--6-col-phone mdl-cell--hide-phone DER">
             
           </div> 
         </div> 
       </div>
     </main>
   </div>
-  <script src="WIL/web/javascript/principal.js"></script>
+  <script src="../javascript/principal.js"></script>
 </body>
 </html>

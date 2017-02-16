@@ -37,9 +37,7 @@
 	display: none;
 }
 
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
+
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
@@ -48,9 +46,11 @@
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
-
+.demo-card-wide.mdl-card {
+  width: auto;
+}
 .demo2-card-wide.mdl-card {
-  width: 512px;
+  width: auto;
 }
 .demo2-card-wide > .mdl-card__title {
   color: #fff;
@@ -62,5 +62,11 @@
 }
 
 body{
-	background: #efefef;
+	/*background: #efefef;*/
+}
+main{
+	background: url("../../img/LULS.png") center / cover;
+}
+.card-text-green{
+	background-color: rgba(80,109,45,0.7);
 }

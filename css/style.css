@@ -1,0 +1,72 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	outline: none;
+}
+
+.button-right-icon{
+	margin-left: 10px;
+
+}
+
+/*Login Section*/
+.login-cover{
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 800;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#loginProgress{
+	display: none;
+}
+#p2{
+	display: none;
+}
+#p3{
+	display: none;
+}
+
+#loginError{
+	display: none;
+}
+
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../img/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.demo-card-wide.mdl-card {
+  width: auto;
+}
+.demo2-card-wide.mdl-card {
+  width: auto;
+}
+.demo2-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../img/project.jpg') center / cover;
+}
+.demo2-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+body{
+	/*background: #efefef;*/
+}
+main{
+	background: url("../img/LULS.png") center / cover;
+}
+.card-text-green{
+	background-color: rgba(80,109,45,0.7);
+}
