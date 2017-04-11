@@ -70,3 +70,18 @@ main{
 .card-text-green{
 	background-color: rgba(80,109,45,0.7);
 }
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../img/proyectWil.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.demo-card-circle > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../img/proyectoPV.png') bottom right 15% no-repeat #46B6AC;
+}
